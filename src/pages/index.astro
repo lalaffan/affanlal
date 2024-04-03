@@ -1,0 +1,134 @@
+---
+	import Layout from '../layouts/Layout.astro';
+	import Slider from '../components/Slider.astro';
+	import Test from '../components/Test.astro';
+---
+
+<Layout title="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India">
+	<main>
+        <section>
+			<Slider />
+			<Test />
+			
+		</section>
+	</main>
+</Layout>
+
+
+
+<style>
+	/*remove default 11px padding on each side of list items*/
+
+.menu-design .et-menu > li {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+/*make the menu items fullwidth and add space between them*/
+
+.menu-design .et_pb_menu__menu nav ul li {
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+}
+
+
+/*style the menu items*/
+
+.menu-design .et_pb_menu__menu nav ul li a {
+	padding: 0px!important;
+}
+
+
+/*style the menu items on hover*/
+
+.menu-design .et_pb_menu__menu nav ul li a:hover {
+	opacity: 1!important;
+	color:#c6d8f1;
+}
+
+
+/*style the active menu item*/
+
+.menu-design .et_pb_menu__menu nav ul li.current-menu-item a {
+	opacity: 1!important;
+	color:#c6d8f1;
+}
+
+
+/*style the arrow icon if there are submenus*/
+
+.menu-design .et_pb_menu__menu .menu-item-has-children>a:first-child:after {
+	content: "5" !important;
+	/*change arrow icon for submenu*/
+	padding: 5px;
+	font-size: 24px;
+}
+
+
+/*style the arrow icon if there are submenus to submenus*/
+
+.menu-design .et_pb_menu__menu .menu-item-has-children .menu-item-has-children>a:first-child:after {
+	padding: 10px !important;
+	right: 0px !important;
+}
+
+
+/*make the submenu align directly to the right of the menu item instead of below*/
+
+.menu-design .et_pb_menu__menu nav ul li ul {
+	top: 0!important;
+}
+
+
+/*align submenu to the right of menu link*/
+
+.menu-design .et_pb_menu__menu nav li ul {
+	left: 100%!important;
+}
+
+
+/*add an icon to the left of each menu item link*/
+
+.menu-design ul li a:before {
+	font-family: 'ETMODULES';
+	content: '\35';
+	text-align: center;
+	vertical-align: middle;
+  margin-top:0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	color:#000;
+	font-size: 24px;
+	transition: all .75s ease;
+}
+
+
+/*style the menu items icon*/
+
+.menu-design ul li a:hover:before {
+	margin-left: 7px;
+	color:#c6d8f1!important;
+	transition: all .75s ease;
+}
+
+
+/*style the active menu item icon*/
+
+.menu-design ul li.current-menu-item a:before {
+	margin-left: 7px;
+	color:#c6d8f1!important;
+}
+
+@media (max-width: 980px) {
+	/*open the mobile menu up and use on all devices*/
+	.et-db #et-boc .et-l .menu-design .et_pb_menu__menu {
+		display: flex;
+	}
+	/*hide the hamburger icon*/
+	.et-db #et-boc .et-l .menu-design .et_mobile_nav_menu {
+		display: none;
+	}
+}
+</style>

@@ -1,0 +1,65 @@
+---
+    import { Image } from 'astro:assets';
+    import Img1 from '../images/1.jpg';
+    import Img2 from '../images/2.jpg';
+    import Img3 from '../images/3.jpg';
+    import Img4 from '../images/4.jpg';
+    import Img5 from '../images/5.jpg';
+---
+
+<div class="image-slideshow">
+    <div class="image fade">
+        <Image src={Img1} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div>
+    <div class="image fade">
+        <Image src={Img2} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div>
+    <div class="image fade">
+        <Image src={Img3} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div>
+    <div class="image fade">
+        <Image src={Img4} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div>
+    <div class="image fade">
+        <Image src={Img5} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div>
+</div>
+
+<style>
+    * { box-sizing: border-box }
+    .image-slideshow {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    }
+    img {
+    width: 100%
+    }
+    .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+    }
+    @keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
+    }
+</style>
+<script>
+    let index = 0;
+    displayImages();
+    function displayImages() {
+    let i;
+    const images = document.getElementsByClassName("image") as HTMLCollectionOf<HTMLElement>;
+    for (i = 0; i < images.length; i++) 
+    {
+        images[i].style.display = "none";
+    }
+    index++;
+    if (index > images.length) 
+    {
+        index = 1;
+    }
+    images[index-1].style.display = "block";
+    setTimeout(displayImages, 5000); 
+    }
+</script>

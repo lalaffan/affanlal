@@ -1,0 +1,55 @@
+---
+    import { Image } from 'astro:assets';
+    import Logo from '../images/logo.png';
+---
+
+<div class="bg-brown flex justify-center items-center">
+    <div>
+        <Image src={Logo} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="w-[70%]" />
+    </div>
+    <div class="menuItem flex gap-4">
+        <a class="hoverLink" href="/">HOME</a>
+        <a class="hoverLink" href="/rooms-gallery">ROOMS GALLERY</a>
+        <a class="hoverLink" href="/facilities">FACILITIES</a>
+        <a class="hoverLink" href="/location">LOCATION</a>
+        <a class="hoverLink" href="/near-attractions">NEAR ATTRACTIONS</a>
+        <a class="hoverLink" href="/contact">CONTACT</a>
+    </div>
+</div>
+<style>
+.menuItem a {
+  padding: 0.3em 0;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+.menuItem a:before,
+.menuItem a:after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: #996600;
+  width: 0;
+}
+.menuItem a:before {
+  top: 0;
+  left: 0;
+}
+.menuItem a:after {
+  bottom: 0;
+  right: 0;
+}
+.menuItem a:hover,
+.menuItem .current a {
+  color: #FFFF00;
+}
+.menuItem a:hover:before,
+.menuItem .current a:before,
+.menuItem a:hover:after,
+.menuItem .current a:after {
+  width: 100%;
+}
+</style>
