@@ -4,5 +4,5 @@
 
 .hoverLink
 {
-  @apply  text-[1.5vw] lg:text-[1vw] text-white hover:text-yellow 
+  @apply  text-[1.5vw] lg:text-[1.5vw] text-white hover:text-yellow 
 }

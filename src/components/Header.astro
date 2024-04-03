@@ -1,20 +1,23 @@
 ---
     import { Image } from 'astro:assets';
-    import Logo from '../images/logo.png';
+    import Logo from '../images/Logo.svg';
 ---
 
-<div class="bg-brown flex justify-center items-center">
-    <div>
-        <Image src={Logo} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="w-[70%]" />
+<div class="bg-brown flex justify-center items-center w-[100%]">
+    <div class="w-2/6 flex justify-center">
+      <Image src={Logo} alt="Affan Lal" class="w-[35%] p-5" />
     </div>
-    <div class="menuItem flex gap-4">
-        <a class="hoverLink" href="/">HOME</a>
-        <a class="hoverLink" href="/rooms-gallery">ROOMS GALLERY</a>
-        <a class="hoverLink" href="/facilities">FACILITIES</a>
-        <a class="hoverLink" href="/location">LOCATION</a>
-        <a class="hoverLink" href="/near-attractions">NEAR ATTRACTIONS</a>
-        <a class="hoverLink" href="/contact">CONTACT</a>
+    <div class="w-4/6 menuItem flex justify-center gap-4">
+      <a class="hoverLink" href="/">HOME</a>
+      <a class="hoverLink" href="/rooms-gallery">ROOMS GALLERY</a>
+      <a class="hoverLink" href="/facilities">FACILITIES</a>
+      <a class="hoverLink" href="/location">LOCATION</a>
+      <a class="hoverLink" href="/near-attractions">NEAR ATTRACTIONS</a>
+      <a class="hoverLink" href="/contact">CONTACT</a>
     </div>
+    <!-- <div class="w-1/6">
+      
+    </div> -->
 </div>
 <style>
 .menuItem a {

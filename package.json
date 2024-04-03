@@ -1,5 +1,5 @@
 {
-  "name": "lahotelmetro",
+  "name": "affanlal",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,8 +13,11 @@
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.6.4",
     "astro-icon": "^0.8.1",
+    "clsx": "^2.1.0",
     "dependencies": "^0.0.1",
+    "framer-motion": "^11.0.5",
     "gsap": "^3.12.2",
+    "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.3.3"
   }
 }

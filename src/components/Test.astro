@@ -1,40 +1,115 @@
-<h2>Basic Features</h2>
-<ul>
- 	<li>Structure: Double End</li>
- 	<li>Pressure: Moderate Pressure Mechanical Seals</li>
- 	<li>Speed: Low Speed Mechanical Seal</li>
- 	<li>Temperature: Temperature Mechanical Seal</li>
- 	<li>Performance: Corrosion</li>
- 	<li>Standard: Standard</li>
- 	<li>Model No.: DSSU </li>
- 	<li>Balance: Unbalanced</li>
- 	<li>Specification: Inner Diameter: 25 mm to 140 mm</li>
-</ul>
-<h2>Product Detailed Description</h2>
-FW-DSSU Dual Un-Balanced Mechanical Seal for Vertical Type Agitation Equipment
+---
+    import { Image } from 'astro:assets';
+    import Img from '../images/1.jpg'
+---
 
-<h3>Structural Features:</h3>Dual unbalanced is double end structure. This seal is equipped with cooling jacket as a standard features. Pressurised sealant. 
 
-<h3>Industrial Standards:</h3>HG21571-95
 
-<h3>Scopes of Application:</h3>Mainly used in top driven vertical type moderate pressure agitation equipments and multipurpose reactors. 
-<h3>Operation Parameters:</h3>
-<ul>
- 	<li>Pressure: Full vacuum ~ 1.6 MPa </li>
- 	<li>Temperature: - 40 ~ 200 ºC </li>
- 	<li>Linear Speed: 2 m/s or less </li>
-</ul>
-<h3>Materials:</h3>
-<ul>
- 	<li>Rotary Ring: SiC/Carbon</li>
- 	<li>Stationary Ring: TC/SiC</li>
- 	<li>Elastomers: Aflas/Viton/EPDM/PTFE/FFKM</li>
- 	<li>Springs: SS304/SS316/HC-276</li>
- 	<li>Metal Parts: SS304/SS316/SS316L</li>
-</ul>
-<h3>Mediums:</h3>water, oil, weak acid. weak alkali, and other normal mediums 
-<h3>Design Variant:</h3>
-<ul>
- 	<li>Dual Unbalanced seal with bearing design option </li>
-</ul>
-<h3>Customization:</h3>Changes of materials for getting other operating parameters are possible. Contact us with your requirements.
+<!-- <div class="w-full h-screen">
+	<h1 class="text-yellow">Astro is 🚀 on the moon!</h1>
+</div> -->
+    <!-- <div class='reveal'>
+		<Image src={Img} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div>
+	<div class='reveal'>
+		<Image src={Img} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div> 
+	<div class='reveal'>
+		<Image src={Img} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+    </div> -->
+	<div class="container">
+        <div class="img_container">
+            <div class="mask">
+                <Image src={Img} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+            </div>
+        </div>
+        <div class="img_container">
+            <div class="mask">
+                <Image src={Img} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+            </div>
+        </div>
+        <div class="img_container">
+            <div class="mask">
+                <Image src={Img} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+            </div>
+        </div>
+        <div class="img_container">
+            <div class="mask">
+                <Image src={Img} alt="LA METRO HOTEL | Luxury | Peace | Comfort | Mumbai | India" class="" />
+            </div>
+        </div>
+    </div>
+<style>
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131313;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.img_container {
+    margin: 20% 0;
+    width: 70%;
+    position: relative;
+}
+
+.img_container:nth-child(even) {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    transform-origin: left;
+    object-fit: cover;
+}
+
+.mask {
+    visibility: hidden;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+</style>
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+let masks = document.querySelectorAll('.mask');
+
+masks.forEach( mask => {
+    let image = mask.querySelector('img');
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: mask,
+            toggleActions: "restart none none reset"
+        }
+    });
+
+    tl.set(mask, {autoAlpha: 1});
+
+    tl.from(mask, {
+        xPercent: -100,
+        ease: Power2.easeOut
+    });
+    tl.from(image, {
+        xPercent: 100,
+        scale: 1.3,
+        delay: -1.5,
+        ease: Power2.easeOut
+    });
+})
+</script>
+
